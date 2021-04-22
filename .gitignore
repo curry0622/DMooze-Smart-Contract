@@ -1,1 +1,4 @@
 build
+.mnemonic
+.infura
+/node_modules
