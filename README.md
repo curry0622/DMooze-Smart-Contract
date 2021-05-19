@@ -1,1 +1,1 @@
-# DM-Smart-Contract
+# DMooze-Smart-Contract
