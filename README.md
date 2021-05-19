@@ -1,1 +1,1 @@
-# Donation-Blockchain-Platform-Smart-Contract
+# DM-Smart-Contract
