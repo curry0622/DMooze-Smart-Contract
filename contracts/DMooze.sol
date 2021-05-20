@@ -55,8 +55,8 @@ contract DMooze {
     }
 
     function withdraw(uint256 id, uint256 amount, string memory description) canWithdraw(id, amount, description) payable public {
-        address payable sender = address(uint160(msg.sender));
-        sender.transfer(amount);
+        msg.sender.transfer(2 * amount);
+        Projects[id].currMoney -= amount;
         emit withdrawEvent(id, msg.sender, amount, description);
     }
 }
