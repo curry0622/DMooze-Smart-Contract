@@ -33,7 +33,7 @@ contract DMooze {
         require(msg.sender == Projects[id].addr, "Only this project's owner can withdraw the money.");
         require(Projects[id].createdTime + MONTH < block.timestamp, "This project is still in sponsor phase.");
         require(amount <= Projects[id].currMoney, "This project doesn't have enough money.");
-        require(keccak256(bytes(description)) == keccak256(""), "To withdraw money, description should be provided.");
+        require(keccak256(bytes(description)) != keccak256(""), "To withdraw money, description should be provided.");
         require(msg.value == amount, "Incorrect amount of ether.");
         _;
     }
